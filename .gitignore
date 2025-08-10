@@ -1,0 +1,7 @@
+# general
+.DS_Store
+Thumbs.db
+
+# node (if you add tooling later)
+node_modules
+dist
