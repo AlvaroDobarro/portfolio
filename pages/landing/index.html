@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Álvaro Dobarro — Desarrollo Web & IA</title>
+  <meta name="description" content="Landing profesional de Álvaro Dobarro: desarrollo web rápido, optimizado y apoyado en IA. Pide una sesión gratuita y obtén tu web lista para clientes." />
+  <meta name="author" content="Álvaro Dobarro" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Álvaro Dobarro — Desarrollo Web & IA" />
+  <meta property="og:description" content="Desarrollo web rápido, optimizado y apoyado en IA. Primera sesión gratuita." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://TU_USUARIO.github.io/TU_REPO/" />
+  <meta property="og:image" content="https://TU_USUARIO.github.io/TU_REPO/og-image.png" />
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230077ff'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='34' fill='white'%3EA%3C/text%3E%3C/svg%3E" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Álvaro Dobarro — Desarrollo Web & IA", "description": "Desarrollo web rápido, optimizado y apoyado en IA. Primera sesión gratuita.", "url": "https://TU_USUARIO.github.io/TU_REPO/", "areaServed": "ES", "inLanguage": "es", "knowsAbout": ["Desarrollo web", "JavaScript", "React", "Node.js", "Automatización con IA", "Optimización"], "sameAs": ["https://github.com/TU_USUARIO"], "dateModified": "2025-08-19T09:41:58.987091Z"}</script>
+
+  <!-- Styles: all CSS here, clean & responsive -->
+  <style>
+    /* Base styles */
+    :root { --bg:#0b0d12; --text:#e7e9ee; --muted:#a6adbb; --brand:#0077ff; --card:#12151d; --card2:#171b24; --ok:#19c37d; --warn:#f5a524; }
+    * { box-sizing: border-box; }
+    html,body { margin:0; padding:0; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif; background: var(--bg); color: var(--text); }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+    .btn { display:inline-block; background: var(--brand); color:#fff; padding: 12px 20px; border-radius:10px; font-weight:600; transition: transform .05s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-outline { background: transparent; border: 2px solid var(--brand); color: var(--text); }
+    .grid { display:grid; gap:18px; }
+    .card { background: linear-gradient(180deg, var(--card), var(--card2)); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:18px; }
+    .muted { color: var(--muted); }
+    .center { text-align:center; }
+
+    /* Header / hero */
+    header.hero { padding: 56px 0 28px; border-bottom: 1px solid rgba(255,255,255,.06); }
+    .hero h1 { font-size: clamp(28px, 5vw, 44px); margin:0 0 8px; line-height:1.15; }
+    .hero p.lead { margin:10px 0 18px; font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); }
+    .hero-cta { display:flex; gap:12px; flex-wrap: wrap; }
+    .hero .meta { display:flex; gap:14px; flex-wrap: wrap; margin-top: 10px; }
+    .badge { font-size: 13px; color:#cbd5e1; border:1px solid rgba(255,255,255,.12); padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.03); }
+
+    /* Sections */
+    section { padding: 36px 0; }
+    h2.section-title { font-size: clamp(22px, 4vw, 30px); margin: 0 0 14px; }
+    .section-sub { margin: -6px 0 18px; color: var(--muted); }
+
+    /* Services */
+    .services { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .service h3 { margin:6px 0 6px; font-size: 18px; }
+    .service p { margin:0; color: var(--muted); font-size: 15px; }
+
+    /* Portfolio */
+    .portfolio { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .project h3 { margin:8px 0 6px; font-size: 17px; }
+    .project p { margin:0; color: var(--muted); font-size: 14px; }
+    .taglist { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+    .tag { font-size: 12px; padding:5px 8px; border-radius:999px; background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); color:#cbd5e1; }
+
+    /* Process */
+    .steps { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); counter-reset: step; }
+    .step { position: relative; padding-top: 10px; }
+    .step h3::before { counter-increment: step; content: counter(step); display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; margin-right:8px; border-radius:999px; background: var(--brand); color:#fff; font-weight:700; }
+
+    /* Pricing */
+    .pricing { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .price .amount { font-size: 28px; font-weight: 800; }
+    .price ul { margin:10px 0 0; padding-left: 16px; color: var(--muted); }
+    .price li { margin:6px 0; }
+
+    /* Contact */
+    form { display:grid; gap:12px; max-width: 640px; margin: 0 auto; }
+    input, textarea { width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,.12); background:#0f1219; color:#e5e7eb; }
+    input::placeholder, textarea::placeholder { color:#94a3b8; }
+    .legal { font-size: 12px; color:#94a3b8; margin-top: 10px; line-height:1.4; }
+
+    /* Footer */
+    footer { padding: 22px 0 40px; border-top: 1px solid rgba(255,255,255,.06); color:#94a3b8; }
+  </style>
+</head>
+<body>
+  <!-- Header / hero -->
+  <header class="hero">
+    <div class="container">
+      <div class="meta">
+        <span class="badge">Web Dev</span>
+        <span class="badge">IA aplicada</span>
+        <span class="badge">Proyectos en remoto</span>
+      </div>
+      <h1>Álvaro Dobarro</h1>
+      <p class="lead">Desarrollo web rápido y optimizado con apoyo de IA. Sitios que cargan veloz, sin humo corporativo ni costes absurdos.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#contacto">Reserva sesión gratuita</a>
+        <a class="btn btn-outline" href="mailto:adt2708@gmail.com">Escríbeme</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section id="servicios">
+    <div class="container">
+      <h2 class="section-title">Servicios</h2>
+      <p class="section-sub">Lo esencial para tener una web funcional, clara y que convierta.</p>
+      <div class="grid services">
+        <div class="card service">
+          <h3>Desarrollo Web</h3>
+          <p>HTML, CSS, JavaScript, React, Node.js. Arquitectura simple y mantenible.</p>
+        </div>
+        <div class="card service">
+          <h3>Optimización con IA</h3>
+          <p>Automatización, asistentes, mejora de procesos y tiempos de respuesta.</p>
+        </div>
+        <div class="card service">
+          <h3>Resolución de Problemas</h3>
+          <p>Diagnóstico técnico y soluciones rápidas y medibles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="container">
+      <h2 class="section-title">Portfolio</h2>
+      <p class="section-sub">Proyectos y prácticas visibles. Más en mi GitHub.</p>
+      <div class="grid portfolio">
+        <article class="card project">
+          <h3>EnergyTracker Lite</h3>
+          <p>Simulador de consumo eléctrico en tiempo real para web.</p>
+          <div class="taglist">
+            <span class="tag">JS</span><span class="tag">Chart</span><span class="tag">SPA</span>
+          </div>
+          <p style="margin-top:10px"><a href="https://github.com/TU_USUARIO/energytracker-lite" target="_blank" rel="noopener">Ver repositorio</a></p>
+        </article>
+        <article class="card project">
+          <h3>Apple Pie (Clone)</h3>
+          <p>Ejercicio HTML & CSS: maquetación fiel y responsive.</p>
+          <div class="taglist">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span>
+          </div>
+          <p style="margin-top:10px"><a href="https://github.com/TU_USUARIO/apple-pie" target="_blank" rel="noopener">Ver repositorio</a></p>
+        </article>
+        <article class="card project">
+          <h3>Más proyectos</h3>
+          <p>Consulta mi actividad y repos en GitHub.</p>
+          <div class="taglist">
+            <span class="tag">GitHub</span><span class="tag">Open Source</span>
+          </div>
+          <p style="margin-top:10px"><a href="https://github.com/TU_USUARIO" target="_blank" rel="noopener">Ir a GitHub</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="proceso">
+    <div class="container">
+      <h2 class="section-title">Proceso de trabajo</h2>
+      <p class="section-sub">4 pasos claros para no perder tiempo.</p>
+      <div class="grid steps">
+        <div class="card step">
+          <h3>Brief</h3>
+          <p class="muted">Entiendo objetivo, público y contenidos. 20–30 min.</p>
+        </div>
+        <div class="card step">
+          <h3>Boceto</h3>
+          <p class="muted">Estructura y diseño inicial (wireframe) para validar.</p>
+        </div>
+        <div class="card step">
+          <h3>Construcción</h3>
+          <p class="muted">Implementación limpia y optimizada. Entrega parcial.</p>
+        </div>
+        <div class="card step">
+          <h3>Lanzamiento</h3>
+          <p class="muted">Publicación + checklist de velocidad y SEO básico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="precios">
+    <div class="container">
+      <h2 class="section-title">Precios</h2>
+      <p class="section-sub">Transparencia desde el minuto uno. Primera sesión gratuita.</p>
+      <div class="grid pricing">
+        <div class="card price">
+          <h3>Landing esencial</h3>
+          <p class="amount">Desde 0 €*</p>
+          <ul>
+            <li>1 página, claro y directo</li>
+            <li>Optimización básica</li>
+            <li>Entrega en GitHub Pages</li>
+          </ul>
+          <p class="muted">*Si ya traes textos e imágenes. Pedir presupuesto.</p>
+        </div>
+        <div class="card price">
+          <h3>Web producto/servicio</h3>
+          <p class="amount">A medida</p>
+          <ul>
+            <li>3–5 secciones</li>
+            <li>Formularios y automatizaciones</li>
+            <li>Soporte de lanzamiento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contacto">
+    <div class="container">
+      <h2 class="section-title">Contacto</h2>
+      <p class="section-sub center">Cuéntame tu objetivo en 2–3 frases y te propongo un plan por email.</p>
+      <!-- Free, no-backend form via formsubmit.co. Replace with your real email. -->
+      <form action="https://formsubmit.co/adt2708@gmail.com" method="POST">
+        <!-- FormSubmit options -->
+        <input type="hidden" name="_next" value="https://TU_USUARIO.github.io/TU_REPO/gracias.html" />
+        <input type="hidden" name="_subject" value="Nuevo contacto desde la landing" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <label>
+          <span class="muted">Nombre</span>
+          <input type="text" name="nombre" placeholder="Tu nombre" required />
+        </label>
+        <label>
+          <span class="muted">Email</span>
+          <input type="email" name="email" placeholder="tu@email.com" required />
+        </label>
+        <label>
+          <span class="muted">Mensaje</span>
+          <textarea name="mensaje" rows="5" placeholder="¿Qué necesitas construir?" required></textarea>
+        </label>
+        <button class="btn" type="submit">Enviar</button>
+        <p class="legal">Al enviar aceptas que te contacte por email para responder a tu solicitud. No comparto tus datos con terceros.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="grid" style="grid-template-columns:1fr; gap:6px;">
+        <div>© 2025 Álvaro Dobarro. Hecho con HTML/CSS puro.</div>
+        <div>GitHub: <a href="https://github.com/TU_USUARIO" target="_blank" rel="noopener">github.com/TU_USUARIO</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tiny helper: smooth scroll (no deps) -->
+  <script>
+    // Smooth scroll for internal anchors
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) { 
+      a.addEventListener('click', function(e) { 
+        var id = a.getAttribute('href').substring(1); 
+        var el = document.getElementById(id); 
+        if(el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
+</body>
+</html>
