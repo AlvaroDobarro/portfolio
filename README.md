@@ -1,5 +1,5 @@
-# Álvaro — Portfolio
+# Álvaro Dobarro — Portfolio
 
-This is my public portfolio. I will add projects as I progress through my bootcamp.
+This is my public portfolio. Web Development and AI solutions. 
 
-- Live site: https://TUUSUARIO.github.io/portfolio
+Live site: https://alvarodobarro.github.io/portfolio
